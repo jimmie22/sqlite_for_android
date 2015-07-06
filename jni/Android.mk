@@ -6,7 +6,11 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE    := sqlite
-LOCAL_CPPFLAGS  += -std=c++11 -Os
+LOCAL_CPPFLAGS  += -std=c++11
+ifneq ($(TARGET_ARCH),arm)
+LOCAL_CPPFLAGS  += -Os
+endif
+
 LOCAL_SRC_FILES := sqlite3.c
 
 #include $(BUILD_STATIC_LIBRARY)
