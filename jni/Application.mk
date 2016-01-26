@@ -1,4 +1,2 @@
-APP_STL    := gnustl_static
-APP_CFLAGS += -fexceptions
-APP_CFLAGS += -D ANDROID
+APP_STL    := stlport_static
 APP_ABI := all
